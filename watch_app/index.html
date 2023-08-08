@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>任务下发页面</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>任务下发</h1>
+    <form id="taskForm">
+      <label for="db">数据库连接：</label>
+      <input type="text" id="db" name="db" placeholder="user:password@tcp(localhost:3306)/dbname" required><br><br>
+      <label for="tables">表名：</label>
+      <input type="text" id="tables" name="tables" placeholder="table1,table2,table3" required><br><br>
+      <label for="limit">限制数：</label>
+      <input type="number" id="limit" name="limit" value="100" required><br><br>
+      <label for="orderby">排序字段：</label>
+      <input type="text" id="orderby" name="orderby" placeholder="field1,field2,field3" required><br><br>
+      <label for="update">是否更新：</label>
+      <input type="checkbox" id="update" name="update"><br><br>
+      <button type="button" onclick="submitTask()">提交任务</button>
+    </form>
+  </div>
+  <script src="submit.js"></script>
+</body>
+</html>
